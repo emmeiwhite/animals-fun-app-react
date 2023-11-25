@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ShowAnimal from "./ShowAnimal";
+import "./App.css";
 
 const animals = ["bird", "cat", "cow", "dog", "gator", "heart", "horse"];
 
@@ -18,14 +19,16 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="app">
       <button onClick={handleClick}>Add Animal</button>
-      {animals.map((animal, index) => (
-        <ShowAnimal
-          type={animal}
-          key={index}
-        />
-      ))}
+      <div className="animal-list">
+        {animals.map((animal, index) => (
+          <ShowAnimal
+            type={animal}
+            key={index}
+          />
+        ))}
+      </div>
     </div>
   );
 }
