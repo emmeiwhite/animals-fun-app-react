@@ -1,5 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function App() {
-  return <div>App</div>;
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount((prev) => prev + 1);
+  };
+  return (
+    <div>
+      <button onClick={handleClick}>Add Animal</button>
+      <div>Number of Animals: {count}</div>
+    </div>
+  );
 }
