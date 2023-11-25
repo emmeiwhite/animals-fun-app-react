@@ -27,6 +27,7 @@ export default function ShowAnimal({ type }) {
     <div
       className="show-animal"
       onClick={handleClick}
+      title="click on the animal"
     >
       <img
         src={svgMap[type]}
